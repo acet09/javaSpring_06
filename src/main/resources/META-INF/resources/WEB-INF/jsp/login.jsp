@@ -6,11 +6,11 @@
 <meta charset="EUC-KR">
 <title>로그인 페이지</title>
 <style>
-	button {
-		width: 50px;
-		height: 20px;
-		border: 1px solid red;
-	}
+button {
+	width: 50px;
+	height: 20px;
+	border: 1px solid red;
+}
 </style>
 </head>
 <body>
@@ -18,5 +18,7 @@
 		<input>
 		<button type="button">추가</button>
 	</form>
+
+	${name}
 </body>
 </html>
