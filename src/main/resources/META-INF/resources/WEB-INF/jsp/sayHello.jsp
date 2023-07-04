@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h1>제목1</h1>
+	<h2>제목2</h2>
 	비 개많이 온다 - jsp
 </body>
 </html>
