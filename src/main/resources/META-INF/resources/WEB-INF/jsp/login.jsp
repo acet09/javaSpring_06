@@ -1,24 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
 <html>
-<head>
-<meta charset="EUC-KR">
-<title>로그인 페이지</title>
-<style>
-button {
-	width: 50px;
-	height: 20px;
-	border: 1px solid red;
-}
-</style>
-</head>
+	<head>
+		<title>login page</title>
+	</head>
 <body>
-	<form>
-		<input>
-		<button type="button">추가</button>
+		Welcome to the login page!
+	<form method="post">
+		Name: <input type="text" name="name">
+		Password: <input type="password" name="password">
+					<input type="submit">
 	</form>
-
-	${name}
 </body>
 </html>
