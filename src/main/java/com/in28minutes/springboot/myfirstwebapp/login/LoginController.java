@@ -8,17 +8,33 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
-	
-	@RequestMapping(value="login",method = RequestMethod.GET)
-	public String gotoLoginPage() {		
+
+	private AuthenticationService authenticationService;
+
+	@RequestMapping(value = "login", method = RequestMethod.GET)
+	public String gotoLoginPage() {
 		return "login";
 	}
-	
-	@RequestMapping(value="login",method = RequestMethod.POST)
-	public String gotoWelcomePage(@RequestParam String name, @RequestParam String password, ModelMap model) {		
-		model.put("name", name);
-		model.put("password", password);
+
+	public LoginController(AuthenticationService authenticationService) {
+		super();
+		this.authenticationService = authenticationService;
+	}
+
+	@RequestMapping(value = "login", method = RequestMethod.POST)
+	public String gotoWelcomePage
+		(@RequestParam String name, @RequestParam String password, 
+				ModelMap model) {
+
+		if (authenticationService.authenticate(name, password)) {
+
+			model.put("name", name);
+			model.put("password", password);
+
+			return "welcome";
+		}
 		
-		return "welcome";
+		model.put("errorMessage", "Invalid Creadentialse! Please try again.");
+		return "login";
 	}
 }
