@@ -48,7 +48,6 @@ public class TodoController {
 			@Valid Todo todo, BindingResult result) {
 		
 		if(result.hasErrors()) {
-			model.addAttribute("message", "10String up plese");
 			return "todo";
 		}
 		

@@ -7,23 +7,18 @@
 <link href="webjars/bootstrap/5.3.0/css/bootstrap.min.css"
 	rel="stylesheet">
 <title>Add Todo page</title>
-<script>
-	var message = "${message}";
-	if (message) {
-		alert(message);
-	}
-</script>
 </head>
 <body>
 	<div class="container">
 		<h1>Enter Todo Details</h1>
-		<form:form method="POST" modelAttribute="todo">
+			<form:form method="POST" modelAttribute="todo">
 			Description: <form:input type="text" path="description"
 				required="required" />
 			<form:input type="hidden" path="id" />
 			<form:input type="hidden" path="done" />
-
 			<input type="submit" class="btn btn-success" />
+			<br>
+			<form:errors path="description" cssClass="text-warning"/>
 		</form:form>
 
 	</div>
