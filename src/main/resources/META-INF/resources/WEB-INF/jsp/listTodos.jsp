@@ -2,6 +2,7 @@
 
 <html>
 <head>
+<link href="webjars/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 <title>List Todos page</title>
 </head>
 <body>
@@ -28,5 +29,8 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	<script src="webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	<script src="webjars/jquery/3.6.4/jquery.min.js"></script>
+	<!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
 </body>
 </html>
