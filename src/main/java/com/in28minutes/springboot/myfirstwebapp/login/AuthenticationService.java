@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 public class AuthenticationService {
 	public boolean authenticate(String username, String password) {
 	
-		boolean isValidUserName = username.equalsIgnoreCase("in28minutes");
-		boolean isValudPassword = password.equalsIgnoreCase("dummy");
+		boolean isValidUserName = username.equalsIgnoreCase("coco");
+		boolean isValudPassword = password.equalsIgnoreCase("123");
 		
 		return isValidUserName && isValudPassword ;
 	}
