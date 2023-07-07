@@ -10,12 +10,13 @@
 	<div class="container">
 		<h1>Your Todos</h1>
 		<table class="table">
-			<thead>
+			<thead style="border-bottom: 2px solid #555;">
 				<tr>
 					<th>id</th>
 					<th>Description</th>
 					<th>Target Date</th>
 					<th>Is Done</th>
+					<th>delete</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,12 +26,13 @@
 						<td>${todo.description}</td>
 						<td>${todo.targetDate}</td>
 						<td>${todo.done}</td>
+						<td><a href="delete-todo?id=${todo.id}" class="btn btn-warning">Delete</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 		
-		<a href="add-todo" class="btn btn-success" >Add Todo</a>
+		<a href="add-todo" class="btn btn-success">Add Todo</a>
 		
 	</div>
 	<script src="webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>

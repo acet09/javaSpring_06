@@ -18,7 +18,7 @@
 			<form:input type="hidden" path="done" />
 			<input type="submit" class="btn btn-success" />
 			<br>
-			<form:errors path="description" cssClass="text-warning"/>
+			<form:errors path="description" cssClass="text-danger"/>
 		</form:form>
 
 	</div>
